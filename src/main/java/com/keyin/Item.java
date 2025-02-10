@@ -4,6 +4,7 @@ public class Item {
     private String name;
     private int quantity;
     private double price;
+    private double pricewithtax;
 
     public Item() {
 
@@ -37,6 +38,11 @@ public class Item {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    public double getPriceWithTax() {
+        double pricewithtax = this.price * 1.15;
+        return pricewithtax;
     }
 
     public void removeOneQuantity() {
